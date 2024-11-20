@@ -1,0 +1,110 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+// 1. Income Tax Calculation Based on Income Slabs//
+         var income=Number(prompt(" Please Enter your Income:"))
+         var income2=0
+         if(income<=250000){
+         console.log("You need not pay any Tax")
+         }else if(income>250000 && income<=500000){
+         income2=income*5/100;
+         console.log("Total Tax payable=",income2)
+         }else if (income>500000 && income<=1000000){
+             income2=12500+income*20/100;
+             console.log("Total Tax payable=",income2)
+         }else if(income>1000000){
+             income2=112500+income*30/100;
+             console.log("Total Tax payable=",income2)
+         }else{
+             console.log("enter a valid income ")
+         }
+
+
+
+
+
+//2.Write a program that calculates the shipping cost for a parcel based on its weight and destination*//
+
+         var weight=Number(prompt("please enter the weight of your parsel in kgs only ="));
+         var area=prompt("please enter your destination").toLowerCase();
+        if(weight<=1){
+             if(area=="local"){
+                 console.log("The total shipping cost=",weight*5,"Rs")
+             }else if(area=="national"){
+                 console.log("The total shipping cost=",weight*8,"Rs")
+             }else if (area=="international"){
+                 console.log("The total shipping cost=",weight*15,"Rs")
+             }else{
+                 console.log("Please enter a valid Area")
+             }
+         }else if(weight>1 && weight<=5){
+             if(area=="local"){
+                 console.log("The total shipping cost=",weight*10,"Rs")
+             }else if(area=="national"){
+                 console.log("The total shipping cost=",weight*15,"Rs")
+             }else if(area=="international"){
+                 console.log("The total shipping cost=",weight*30,"Rs")
+             }else{
+                 console.log("Please enter a valid Area")
+             }
+         }else if (weight>5 && weight<=10){
+             if(area=="local"){
+                 console.log("The total shipping cost=",weight*20,"Rs")
+             }else if(area=="national"){
+                 console.log("The total shipping cost=",weight*25,"Rs")
+             }else if(area=="international"){
+                 console.log("The total shipping cost=",weight*50,"Rs")
+             }else{
+                 console.log("Please enter a valid Area")
+             }
+         }else if(weight>10){
+             if(area=="local"){
+                 console.log("The total shipping cost=",weight*30,"Rs")
+             }else if(area=="national"){
+                 console.log("The total shipping cost=",weight*35,"Rs")
+             }else if(area=="international"){
+                 console.log("The total shipping cost=",weight*70,"Rs")
+             }else{
+                 console.log("Please enter a valid Area")
+             }
+         }else{
+             console.log("please enter a valid weight")
+         }
+
+        
+
+
+
+       // 3. Write a program to calculate the electricity bill based on the number of units consumed:
+
+        var units=Number(prompt("Enter the number of units:"));
+        if(units<=100){
+            console.log("Total Electricity bill amount =",units*1,"Rs")
+        }else if(units<=300){
+                console.log("Total Electricity bill amount =",(100 * 1.0) + ((units - 100) * 1.5),"rs")
+        }else if(units>300){
+            console.log("Total Electricity bill amount =",(100 * 1.0) + (200 * 1.5) + ((units - 300) * 2.0),"rs")
+        }else{
+            console.log("enter a valid units number")
+        }
+    
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
+    
